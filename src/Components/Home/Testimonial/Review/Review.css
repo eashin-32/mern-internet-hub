@@ -1,0 +1,17 @@
+.quote{
+    
+    height: 4rem;
+    position: absolute;
+    top: -3%;
+    left: 40%;
+    
+}
+.profile-pic{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 80%;
+    object-fit: cover;
+}
+.cards{
+    position: relative;
+}

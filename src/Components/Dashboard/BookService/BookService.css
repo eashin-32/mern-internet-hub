@@ -1,0 +1,42 @@
+* { 
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box; 
+}
+.containerz{
+        width: 85%;
+        margin-left: auto;
+
+}
+.SectionTitle{
+    padding:15px 20px;
+    
+}
+.SectionMain{
+    box-sizing: border-box;
+    background-color: #F4F7FC;
+    height:100vh;
+    overflow: hidden !important;
+    padding:35px 0 0 25px;
+}
+.SectionMain input{
+    display: block;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    width: 40%;
+    border-radius: 5px;
+}
+.SectionMain .button{
+    width: 10% !important;
+    display: inline;
+    margin-left: 14%;
+}
+.SectionMain .small-input{
+    display: inline;
+    width: 19%;
+    margin-right: 2%;
+}
+
+
