@@ -53,8 +53,8 @@ const Login = () => {
     setLoggedInUser(isSignedIn)
 
     history.replace(from);
-    
-    localStorage.setItem(token)
+
+     
   }).catch((error) => {
     
     var errorCode = error.code;
@@ -65,9 +65,10 @@ const Login = () => {
     var credential = error.credential;
     
   });
+ 
 };
 
-    
+
 
     return (
         <section className='row login'>

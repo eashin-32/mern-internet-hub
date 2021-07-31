@@ -15,6 +15,7 @@ import BookingList from './Components/Dashboard/BookingList/BookingList';
 import PrivateRoute from './Components/Shared/PrivateRoute/PrivateRoute';
 
 export const userContext = createContext();
+export const productContext = createContext();
 
 
 function App() {
@@ -23,35 +24,38 @@ function App() {
         name: '',
         email: '',
         avatar: '',
+        
   })
 
   const [selectedProduct, setSelectedProduct] = useState({title: '', price:''})
   
   return (
-    <userContext.Provider value={[loggedInUser, setLoggedInUser, setSelectedProduct, selectedProduct]}>
-    <Router>
-         <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <PrivateRoute path='/dashboard'>
-              <Dashboard></Dashboard>
-          </PrivateRoute>
-          <PrivateRoute path='/dash/booking'>
-            <BookService></BookService>
-          </PrivateRoute>
-          <PrivateRoute path='/dash/booking-list'>
-            <BookingList></BookingList>
-          </PrivateRoute>
-          <Route path='*'>
-            <NotFound></NotFound>
-          </Route>
-          
-        </Switch>
-    </Router>
+    <userContext.Provider value={[loggedInUser, setLoggedInUser]}>
+      <productContext.Provider value={[setSelectedProduct, selectedProduct]}>
+          <Router>
+              <Switch>
+                <Route exact path="/">
+                  <Home></Home>
+                </Route>
+                <Route path="/login">
+                  <Login></Login>
+                </Route>
+                <PrivateRoute path='/dashboard'>
+                    <Dashboard></Dashboard>
+                </PrivateRoute>
+                <PrivateRoute path='/dash/booking'>
+                  <BookService></BookService>
+                </PrivateRoute>
+                <PrivateRoute path='/dash/booking-list'>
+                  <BookingList></BookingList>
+                </PrivateRoute>
+                <Route path='*'>
+                  <NotFound></NotFound>
+                </Route>
+                
+              </Switch>
+          </Router>
+          </productContext.Provider>
     </userContext.Provider>
   );
 }

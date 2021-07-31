@@ -2,16 +2,17 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import'./BookService.css'
 import { FaCreditCard } from 'react-icons/fa';
-import { userContext } from './../../../App';
+import { productContext, userContext } from './../../../App';
 import Sidebar from '../Sidebar/Sidebar';
 
 const BookService = (props) => {
     const [loggedInUser, setLoggedInUser] = React.useContext(userContext)
    
-    const [selectedProduct, setSelectedProduct] = React.useContext(userContext)
+    const [selectedProduct, setSelectedProduct] = React.useContext(productContext)
 
     const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => console.log(data);
+  
         console.log(selectedProduct)
     return (
         <div>

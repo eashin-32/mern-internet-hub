@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import './ServiceCard.css';
 import { Link } from 'react-router-dom';
 import { userContext } from './../../../App';
@@ -8,6 +8,8 @@ import { userContext } from './../../../App';
 
 const ServiceCard = ({data}) => {
     const [selectedProduct, setSelectedProduct] = useContext(userContext)
+
+    
    
     return (
         <div className='col-md-4'>

@@ -54,7 +54,7 @@ const Testimonial = () => {
 
            <div className="row">
                {
-                   first3.map(data => <Review data={data}></Review>)
+                   first3.map((data, index) => <Review key={index} data={data}></Review>)
                }
            </div>
            <p className='text-center mt-3'><a href="/review"><button className='btn btn-outline-danger'>Check Reviews</button></a></p>

@@ -5,7 +5,7 @@ import './Services.css'
 
 const Services = () => {
     const servicesInfo =[
-        {
+        {  
             title:'Personal Starter',
             speed:'25',
             price:'$15',
@@ -32,7 +32,7 @@ const Services = () => {
             <h3 className='text-center'>Our Awesome <span className='text-danger'>Services</span></h3>
             <div className="row p-5">
                 {
-                    servicesInfo.map(data => <ServiceCard data={data}></ServiceCard>)
+                    servicesInfo.map((data, index) => <ServiceCard key={index} data={data}></ServiceCard>)
                 }
             </div>
         </section>
