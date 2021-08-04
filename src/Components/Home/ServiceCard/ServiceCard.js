@@ -1,13 +1,13 @@
 import React, { useContext, useEffect } from 'react';
 import './ServiceCard.css';
 import { Link } from 'react-router-dom';
-import { userContext } from './../../../App';
+import { productContext } from './../../../App';
 
 
 
 
 const ServiceCard = ({data}) => {
-    const [selectedProduct, setSelectedProduct] = useContext(userContext)
+    const [selectedProduct, setSelectedProduct] = useContext(productContext)
 
     
    
